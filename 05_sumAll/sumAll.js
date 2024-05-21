@@ -5,11 +5,7 @@ const sumAll = function(min, max) {
 
   if (!Number.isInteger(min) || !Number.isInteger(max)) return "ERROR";
 
-  if (min > max) {
-    const tmp = max;
-    max = min;
-    min = tmp;
-  }
+  if (min > max) [min, max] = [max, min];
 
   for (let i = min; i <= max; i++) {
     sum += i;
